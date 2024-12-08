@@ -1,0 +1,129 @@
+<!-- Declares the document type and specifies that this is an HTML5 document -->
+<!DOCTYPE html>
+<!-- The root element of the HTML document with the language attribute set to English -->
+<html lang="en">
+<!-- The head section contains metadata, links to stylesheets, fonts, and other resources -->
+<head>
+    <!-- Specifies the character encoding for the document as UTF-8, which supports most characters globally -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering on mobile devices by setting the width of the viewport to the device width and scaling it -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata specifying the author of the document -->
+    <meta name="author" content="Tobias Thor">
+    <!-- The title of the document, displayed on the browser tab -->
+    <title>Holidays 2024</title>
+    <!-- Links the external CSS file for styling the webpage -->
+    <link rel="stylesheet" href="yule-and-new-year-2024.css">
+    <!-- Preconnects to Google Fonts servers to improve font loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the "Mystery Quest" font from Google Fonts for use in the document -->
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <!--A link to a favicon-->
+    <link rel="icon" href="images/joyful-christmas-tree.png" type="image/x-icon">
+</head>
+    
+<!-- The body contains all visible content and interactive elements of the webpage -->
+<body>
+  <!-- A decorative section with emojis creating a festive pattern -->
+  <section class="emoji-pattern">
+    🎄 🎁 ✨ 🍬 🎅 ⛄️ 🎄 🎁 ✨ 🍬
+  </section>
+    <!-- Main container for the countdown timer functionality -->
+    <section class="container">
+        <!-- The main heading for the timer section -->
+        <h1>Holidays Countdown Timer</h1>
+        <!-- Dropdown menu for selecting specific holiday dates -->
+        <select id="dateSelector">
+          <!-- Option for Christmas Eve -->
+          <option value="2024-12-24">24 December 2024</option>
+          <!-- Option for Christmas Day -->
+          <option value="2024-12-25">25 December 2024</option>
+          <!-- Option for New Year's Eve -->
+          <option value="2024-12-31">31 December 2024</option>
+        </select>
+        <!-- Section displaying the countdown timer -->
+        <section id="countdown">
+          <!-- Displays the number of remaining days -->
+          <p id="days">0</p><span>days</span>
+          <!-- Displays the number of remaining hours -->
+          <p id="hours">0</p><span>hours</span>
+          <!-- Displays the number of remaining minutes -->
+          <p id="minutes">0</p><span>minutes</span>
+          <!-- Displays the number of remaining seconds -->
+          <p id="seconds">0</p><span>seconds</span>
+        </section>
+    </section>
+    
+    <!-- Food Planning Section -->
+    <!-- Section for planning holiday dishes -->
+    <section class="section">
+        <!-- Subheading for the food planning section -->
+        <h2>Holiday Food Planning</h2>
+        <!-- Input field for entering the name of a dish -->
+        <input type="text" id="foodInput" placeholder="Add a dish..." />
+        <!-- Button to add the entered dish to the list -->
+        <button id="addFoodBtn">Add</button>
+        <!-- Unordered list to display added dishes -->
+        <ul id="foodList"></ul>
+    </section>
+
+    <!-- Wishlist Section -->
+    <!-- Section for managing kids' holiday wishlists -->
+    <section class="section">
+        <!-- Subheading for the wishlist section -->
+        <h2>Kids' Wishlist</h2>
+        <!-- Form for entering wishlist details -->
+        <form id="wishlistForm">
+          <!-- Input field for the child's name, marked as required -->
+          <input type="text" id="childName" placeholder="Child's name..." required />
+          <!-- Input field for the gift idea, marked as required -->
+          <input type="text" id="gift" placeholder="Gift idea..." required />
+          <!-- Dropdown for selecting the child's behavior -->
+          <select id="behavior">
+            <!-- Option for "Nice" behavior -->
+            <option value="nice">Nice</option>
+            <!-- Option for "Naughty" behavior -->
+            <option value="naughty">Naughty</option>
+          </select>
+        <!-- Submit button for adding the wishlist entry -->
+        <button type="submit">Add to Wishlist</button>
+        </form>
+        <!-- Unordered list to display wishlist entries -->
+        <ul id="wishlist"></ul>
+    </section>
+
+<!-- Random Story or Poem Section -->
+<!-- Section for displaying random Christmas stories or poems -->
+<section class="section">
+  <!-- Subheading for the stories section -->
+  <h2>Christmas Stories & Poems</h2>
+  <!-- Button to display a random story or poem -->
+  <button id="randomStoryBtn">Show a Random Story or Poem</button>
+  <!-- Paragraph to display the selected story or poem -->
+  <p id="storyDisplay"></p>
+</section>
+
+<!-- Section for displaying animated snowflake effects -->
+<!-- Multiple snowflake emojis used for visual effect -->
+<section class="snowflakes" aria-hidden="true">
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+  <section class="snowflake">❄</section>
+</section>
+
+<!-- Another decorative emoji pattern section at the bottom -->
+<section class="emoji-pattern">
+  🎄 🎁 ✨ 🍬 🎅 ⛄️ 🎄 🎁 ✨ 🍬
+</section>
+
+<!-- Links the external JavaScript file to add functionality to the webpage -->
+<script src="yule-and-new-year-2024.js"></script>    
+</body>
+</html>

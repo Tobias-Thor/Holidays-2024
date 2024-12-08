@@ -1,0 +1,206 @@
+/* The overall styling for the body element */
+body {
+    font-family: "Mystery Quest", system-ui; /* Sets the primary font to "Mystery Quest" with a fallback to system default fonts */
+    text-align: center; /* Aligns text to the center of the page horizontally */
+    font-weight: 400; /* Applies a regular font weight */
+    font-style: normal; /* Ensures the text is not italicized */
+    background: linear-gradient(to bottom, #003973, #005cbf); /* Sets a vertical gradient background transitioning from dark blue (#003973) to lighter blue (#005cbf) */
+    color: gold; /* Changes the text color to gold for readability against the dark background */
+    background-repeat: no-repeat; /* Prevents the gradient from repeating if the page is larger than its content */
+    background-attachment: fixed; /* Fixes the background in place while the user scrolls */
+  }
+  
+  /* A utility class to apply the "Mystery Quest" font to other elements */
+  .mystery-quest-regular {
+    font-family: "Mystery Quest", system-ui; /* Uses the same font-family as the body */
+    font-weight: 400; /* Regular font weight */
+    font-style: normal; /* Ensures normal (non-italic) styling */
+  }
+  
+  /* Styling for sections with emoji patterns */
+  .emoji-pattern {
+    position: static; /* Keeps the element positioned relative to the document flow */
+    top: 0; /* Aligns to the top of the container (no effect in static positioning) */
+    left: 0; /* Aligns to the left of the container (no effect in static positioning) */
+    width: 100%; /* Makes the element span the full width of its container */
+    height: 100%; /* Makes the element span the full height of its container */
+    font-size: 2rem; /* Sets a font size of 2 rem units for emojis */
+    text-align: center; /* Centers text horizontally */
+    line-height: 2.5rem; /* Adjusts vertical spacing between lines of text */
+    pointer-events: none; /* Prevents this element from interfering with mouse or touch interactions */
+    z-index: 1; /* Sets the stack order to ensure it's rendered above other elements with a lower z-index */
+    overflow: hidden; /* Hides any overflowing content that extends beyond the container's boundaries */
+}
+  
+  /* Main container styling */
+  .container {
+    max-width: 600px; /* Restricts the container's width to a maximum of 600px */
+    margin: 50px auto; /* Centers the container with equal margin on top and bottom */
+    padding: 20px; /* Adds 20px of space inside the container */
+    background: crimson; /* Sets a red background for emphasis */
+    border-radius: 8px; /* Rounds the corners of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect to create depth */
+  }
+  
+  /* Heading styles */
+  h1 {
+    margin-bottom: 20px; /* Adds spacing below the heading */
+  }
+  
+  /* General section styles */
+  .section {
+    margin-bottom: 40px; /* Adds spacing below each section */
+  }
+  
+  /* Styling for form inputs, dropdowns, and buttons */
+  #dateSelector, #foodInput, #childName, #gift, #behavior, button {
+    padding: 10px; /* Adds padding inside the elements for better usability */
+    margin: 5px 0; /* Adds vertical spacing between form elements */
+    font-size: 16px; /* Increases font size for better readability */
+    border-radius: 5px; /* Adds rounded corners for a modern look */
+    border: 1px solid gold; /* Creates a gold border around the elements */
+  }
+  
+  /* Styling for unordered lists */
+  ul {
+    list-style: none; /* Removes the default list bullet points */
+    padding: 0; /* Removes the default padding of the list */
+    margin: 20px 0; /* Adds vertical spacing above and below the list */
+  }
+  
+  /* Individual list item styling */
+  li {
+    margin: 10px 0; /* Adds spacing between list items */
+    padding: 10px; /* Adds padding inside the list items */
+    background: crimson; /* Sets a red background color */
+    border: 1px solid gold; /* Adds a gold border for contrast */
+    border-radius: 5px; /* Rounds the corners of each list item */
+  }
+  
+  /* Styling for buttons */
+  button {
+    background-color: darkgreen; /* Sets a dark green background color */
+    border-color: gold; /* Adds a gold border */
+    color: white; /* Sets the text color to white for contrast */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+
+  }
+  
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: green; /* Lightens the button color when hovered */
+  }
+
+  /* Styling for remove buttons */
+  .remove-btn {
+    background-color: crimson; /* Sets a red background */
+    color: gold; /* Makes the text gold */
+    border: none; /* Removes the border */
+    border-radius: 3px; /* Slightly rounds the button corners */
+    cursor: pointer; /* Adds a pointer cursor to indicate interactivity */
+    margin-left: 10px; /* Adds space to the left of the button */
+  }
+  
+  /* Hover effect for remove buttons */
+  .remove-btn:hover {
+    background-color: darkred; /* Darkens the button color when hovered */
+  }
+  
+
+/* Styling for the story display */
+  #storyDisplay {
+    margin-top: 20px; /* Adds spacing above the story text */
+    font-size: 1.2rem; /* Sets a slightly larger font size */
+    font-style: italic; /* Italicizes the story text for emphasis */
+    white-space: pre-wrap; /* Preserves spaces and line breaks in the displayed text */
+  }
+  
+  /* Styling for snowflake effects */
+  .snowflakes {
+    position: fixed; /* Positions the element relative to the viewport */
+    top: 0; /* Aligns it to the top of the screen */
+    left: 0; /* Aligns it to the left of the screen */
+    width: 100%; /* Covers the full width of the screen */
+    height: 100%; /* Covers the full height of the screen */
+    pointer-events: none; /* Prevents interference with user interactions */
+    z-index: 9999; /* Ensures snowflakes are rendered on top of other elements */
+    overflow: hidden; /* Hides overflowing snowflakes */
+}
+
+/* Individual snowflake styling */
+.snowflake {
+    position: absolute; /* Positions snowflakes independently */
+    top: -10%; /* Starts them slightly off-screen */
+    font-size: 1.5rem; /* Sets their size */
+    color: white; /* Makes them white like real snowflakes */
+    animation: fall 10s linear infinite; /* Animates the snowflakes to fall continuously */
+}
+
+/* Keyframe animation for snowflakes */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Starts the snowflake at its initial position with no rotation */
+        opacity: 1; /* Sets full visibility at the start */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Moves the snowflake down the entire viewport while rotating */
+        opacity: 0.5; /* Reduces visibility slightly as it falls */
+    }
+}
+
+/* Styling for randomly positioned snowflakes */
+.snowflake:nth-child(1) {
+    left: 10%; /* Positions the first snowflake at 10% from the left */
+    animation-delay: 0s; /* No delay before the animation starts */
+    animation-duration: 7s; /* Shortens the animation duration */
+}
+
+/* Additional nth-child rules follow the same pattern for varied positioning and timing... */
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+}
+
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-delay: 3s;
+    animation-duration: 12s;
+}
+
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 9s;
+}
+
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-delay: 5s;
+    animation-duration: 7s;
+}
+
+.snowflake:nth-child(7) {
+  left: 70%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.snowflake:nth-child(8) {
+  left: 80%;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.snowflake:nth-child(9) {
+  left: 90%;
+  animation-delay: 3s;
+  animation-duration: 12s;
+}
+
